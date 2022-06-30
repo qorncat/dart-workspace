@@ -1,7 +1,11 @@
 List<String> cuguli = [];
 
 void main(List<String> args) {
-  
+  List<int> sayilar = [1,-10,90,80,70,40,1111111];
+  sayilar.sort();//küçükten büyüğe
+  print(sayilar);
+  sayilar.sort((a, b) => b-a);//büyükten küçüğe
+  print(sayilar);
   /*
 
   cuguli.insert(2, "shrek"); 
@@ -31,6 +35,19 @@ void deneme(List<String> args) {
 }
 
 void veriyazdir(List<String> args) {
-  if(args.isEmpty){
-  }
+  if(args == "ekle"){
+  cuguli.add("index0"); //add methodu listenin en sonuna ekler.
+  cuguli.insert(0, "index0");//0. indexe bir yere "index0" eklendi
 }
+if(args == "sil"){
+  cuguli.remove("index0");//index0 valuesini siler.
+  cuguli.removeAt(0);//0. indexteki valueyi siler.
+  cuguli.removeLast();//Sonuncu indexteki valueyi siler.
+  int baslangic = 0,bitis = 6;
+  cuguli.removeRange(baslangic, bitis);//0'dan 6'ya kadarki indexteki değerleri siler.(6 hariç)
+  }
+if(args == "temizle"){
+cuguli.clear();
+}
+}
+    
